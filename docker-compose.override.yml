@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  php:
+    build:
+      context: .
+      args:
+        APP_ENV: ${APP_ENV}
+    volumes:
+      - .:/app/web
+  mysql:
+    ports:
+      - "33036:3306"
+    volumes:
+      - ./docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d

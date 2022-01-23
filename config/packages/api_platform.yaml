@@ -1,0 +1,11 @@
+api_platform:
+    title: "House storage backend"
+    description: "House storage api"
+    version: "1.0.0"
+    show_webby: true
+    mapping:
+        paths: ['%kernel.project_dir%/src/Infrastructure/Entity']
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3]
